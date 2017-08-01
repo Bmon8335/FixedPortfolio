@@ -4,8 +4,8 @@
   
   <%= render partial: 'blogs/admin_actions', locals: { blog: blog } %>
 
-  <p>
-    <%= truncate(markdown(blog.body), length: 600, escape: false) %>
+  <p style="word-wrap: break-word; ">
+    <%= truncate(blog.body, length: 600, escape: false) %> <hr>
     <%= link_to "Continue reading", blog %>
   </p>
 </div>
